@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelGallery | Современная галерея изображений</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-camera-retro"></i> PixelGallery</h1>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Поиск изображений...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="filter-tabs" id="categories">
+                <!-- Категории будут добавлены через JS -->
+            </div>
+            <div class="sort-options">
+                <span>Сортировка:</span>
+                <button id="sort-default"><i class="fas fa-random"></i> По умолчанию</button>
+                <button id="sort-rating"><i class="fas fa-star"></i> По рейтингу</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <i class="fas fa-images"></i>
+                <div>
+                    <span class="stat-value" id="count">0</span>
+                    <span class="stat-label">Изображений</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <span class="stat-value" id="avg">0</span>
+                    <span class="stat-label">Средний рейтинг</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery" class="gallery-grid"></div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <div class="modal-meta">
+                    <span class="category-badge" id="modal-category"></span>
+                    <div class="rating">
+                        <span id="modal-rating"></span>
+                        <div class="stars" id="modal-stars"></div>
+                    </div>
+                </div>
+                <a href="" id="modal-url" target="_blank" class="url-link"><i class="fas fa-external-link-alt"></i> Открыть оригинал</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
